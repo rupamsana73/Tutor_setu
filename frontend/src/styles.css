@@ -42,6 +42,36 @@ a {
   margin: 0 auto;
 }
 
+.form-page {
+  max-width: 560px;
+  padding: 80px 0;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.auth-form label {
+  color: #507066;
+  display: grid;
+  font-size: 0.85rem;
+  gap: 7px;
+}
+
+.auth-form input,
+.auth-form select {
+  border: 1px solid #cbd6ce;
+  border-radius: 10px;
+  font: inherit;
+  padding: 12px;
+}
+
+.form-error {
+  color: #a53d2b;
+}
+
 .navbar {
   align-items: center;
   display: flex;

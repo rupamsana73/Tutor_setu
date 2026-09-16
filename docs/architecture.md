@@ -2,9 +2,10 @@
 
 ## Scope
 
-Phase 1 establishes a secure foundation only. It does not implement authentication,
-tutor registration, marketplace workflows, messaging, payments, recommendations, or
-mobile clients.
+Phase 1 establishes a secure foundation. Phase 2 adds authentication, password
+security, email verification, JWT revocation, and application-role permissions.
+Tutor registration, marketplace workflows, messaging, payments, recommendations,
+and mobile clients remain out of scope.
 
 ## Components
 
@@ -29,3 +30,8 @@ returns JSON responses. Persistent domain models will be introduced in later pha
 - CORS origins are explicitly configured.
 - Production deployment must provide a strong secret key, allowed hosts, trusted
   origins, HTTPS, and managed PostgreSQL credentials.
+- Passwords use Django's PBKDF2 hasher and configured validators.
+- Password reset responses are intentionally generic to prevent account
+  enumeration.
+- Email verification is represented by `User.email_verified`; no marketplace
+  endpoint is enabled until later phases.
